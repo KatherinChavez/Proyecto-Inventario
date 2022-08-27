@@ -1,0 +1,43 @@
+<div class=" mb-3 ">
+  <h2 [ngStyle]="{'font-size.px':30,'font-weight': 'bold' , color: '#064d6b','font-family':'Cambria'}">{{title}}</h2>
+  <section>
+    <form (ngSubmit)="add()">
+      <label class="form-label" for="product">Nombre del Producto</label>
+      <input class="form-control" type="text" name="name" [placeholder]="placeholderName"
+        [(ngModel)]="products.nombre" /> <br />
+
+      <label class="form-label" for="product">Descripcion</label>
+      <input class="form-control" type="text" [placeholder]="placeholderDescrip" name="direccion"
+        [(ngModel)]="products.direccion" /><br>
+
+    </form>
+  </section>
+
+  <div class="condition-container">
+    <label class="form-label " for="product">Seleccione talla </label>
+    <select [(ngModel)]="products.opcionSeleccionado" (change)="capturar()" [ngClass]="{styleSelect:'tallas'}">
+      <option [defaultSelected]="true" [disabled]="true"> talla</option>
+      <option *ngFor="let talla of size"> {{talla}} </option>
+    </select>
+  </div>
+
+  <button [ngStyle]="{'background':'#b2d4e4','border-color':'#074c69', 'font-weight':'bold'}" class="btn  mt-3"
+    type="submit" value="guardar" (click)="guardar()" (click)="show()">Guardar</button>
+</div>
+
+
+<h3>Datos Ingresados</h3>
+<div *ngIf="showTable">
+  <table class="table table-striped" [ngClass]="{tableContainer: 'table'}">
+    <tr>
+      <th>Producto</th>
+      <th>Descripción</th>
+      <th>Talla</th>
+    </tr>
+    <tr *ngFor="let producto of productos">
+      <td> {{producto.nombre}}</td>
+      <td>{{producto.direccion}}</td>
+      <td>{{producto.opcionSeleccionado}}</td>
+    </tr>
+  </table>
+</div>

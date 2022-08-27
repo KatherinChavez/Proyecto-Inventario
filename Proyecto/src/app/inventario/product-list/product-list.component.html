@@ -1,0 +1,13 @@
+<div class=" containerList row">
+  <h2 [ngStyle]="{'font-size.px':30,'font-weight': 'bold' , color: '#064d6b', 'font-family':'Cambria'}">
+    Listado de productos
+  </h2>
+  <div>
+    <ul>
+      <li *ngFor="let product of productosService.productList">
+        {{product}}
+      </li>
+    </ul>
+  </div>
+
+</div>

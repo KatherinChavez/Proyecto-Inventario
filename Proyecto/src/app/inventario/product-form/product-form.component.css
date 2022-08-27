@@ -1,0 +1,28 @@
+.styleSelect{
+ margin-left: 4%;
+}
+
+.table{
+    border: 2px solid #052736; 
+    text-align: center;
+}
+.table td {
+    border-right: 2px solid #074c69;
+}
+.table th {
+    border-right: 2px solid #074c69;
+    background-color: #b2d4e4;
+}
+.table tr {
+    border-bottom: 2px solid #074c69;
+}
+
+h2{
+    padding-bottom: 5%;
+}
+h3{
+    color: #064d6b;
+    font-weight: bold;
+    font-size: 27px;
+    font-family:'Cambria'
+}

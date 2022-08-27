@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ordenes',
   templateUrl: './ordenes.component.html',
   styleUrls: ['./ordenes.component.css']
 })
-export class OrdenesComponent implements OnInit {
+export class OrdenesComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
